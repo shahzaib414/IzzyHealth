@@ -1,0 +1,112 @@
+.SignUp {
+  height: 100vh;
+  display: flex;
+  flex-direction: row-reverse;
+  overflow-x: scroll;
+  background-color: white;
+
+  .form-section {
+    max-width: 50%;
+    flex: 0 0 50%;
+    padding: 60px;
+    background-image: url("../../images/intro/login-clouds.jpg"), url("../../images/intro/login-clouds.jpg");
+    background-repeat: no-repeat;
+    background-position: 0 120px, 0 95%;
+    background-size: contain;
+    .form-inner {
+      max-width: 600px;
+      width: 100%;
+      margin: auto;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      form {
+        padding: 80px 0;
+
+        select {
+          height: 45px;
+        }
+      }
+    }
+    .alternate-text {
+      text-align: center;
+      font-size: 18px;
+      color: #676866;
+      a {
+        color: #4265af;
+      }
+    }
+  }
+  .blue-section {
+    max-width: 50%;
+    flex: 0 0 50%;
+    background-color: #38a2f6;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 60px;
+    position: relative;
+    overflow: hidden;
+    h2 {
+      color: #fff;
+      font-size: 2.5rem;
+      line-height: 1.3;
+      position: relative;
+      z-index: 1;
+    }
+    &:after {
+      content: '';
+      display: block;
+      height: 150px;
+      width: 150px;
+      border-radius: 50%;
+      background-color: #2662f0;
+      position: absolute;
+      right: 10%;
+      bottom: 15%;
+    }
+    &:before {
+      content: '';
+      display: block;
+      height: 500px;
+      width: 500px;
+      border-radius: 50%;
+      background: linear-gradient(to right, #fff, #2662f0 70%);
+      position: absolute;
+      left: 0;
+      transform: translateX(-50%);
+      top: 0;
+    }
+  }
+
+  @media screen and (max-width: 991px){
+    .blue-section {
+      &:after {
+        height: 120px;
+        width: 120px;
+      }
+      &:before {
+        height: 300px;
+        width: 300px;
+      }      
+    }
+  }
+  @media screen and (max-width: 767px){
+    height: auto;
+    flex-direction: column;
+    .form-section{
+      max-width: 100%;
+      flex: 0 0 100%;
+      padding: 40px 20px;
+      .form-inner {
+        max-width: 100%;
+      }
+    }
+    .blue-section {
+      max-width: 100%;
+      flex: 0 0 30%;
+      padding: 40px 20px;
+    }
+  }
+}

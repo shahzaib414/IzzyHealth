@@ -1,0 +1,9 @@
+.dashboard-main {
+  padding: 20px 20px 20px 140px;
+  overflow: auto;
+  height: calc(100vh - 75px);
+  position: relative;
+  @media screen and (max-width: 767px){
+    padding: 20px;
+  }
+}

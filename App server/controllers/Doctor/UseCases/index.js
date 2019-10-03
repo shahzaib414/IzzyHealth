@@ -1,0 +1,14 @@
+exports.login = require('./login');
+exports.updateDoctorProfile = require('./updateDoctorProfile');
+exports.getDoctor = require('./getDoctor');
+exports.createDoctor = require('./createDoctor');
+exports.updateProfilePhoto = require('./updateProfilePhoto');
+exports.createCareTeam = require('./createCareTeam');
+exports.assignCareTeamCountry = require('./assignCareTeamCountry');
+exports.addDoctorToCareteam = require('./addDoctorToCareteam');
+exports.removeDoctorFromCareTeam = require('./removeDoctorFromCareteam');
+exports.getCareTeam = require('./getCareTeam');
+exports.getCountriesByCareTeamID = require('./getCountriesByCareTeamID');
+exports.searchCaseByDoctor = require('./searchCaseByDoctor');
+exports.closeCase = require('./closeCase');
+exports.createPrescription = require('./createPrescription');

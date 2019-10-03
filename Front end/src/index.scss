@@ -1,0 +1,213 @@
+// Import css files
+@import "~slick-carousel/slick/slick.css";
+
+// Reset
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+// Custom
+
+html {
+  font-size: 16px;
+}
+
+body {
+  background-color: #f3f2f7;
+  font-family: "Poppins", Arial, sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 0;
+}
+textarea {
+  font-family: "Poppins", Arial, sans-serif;
+}
+
+.logo {
+  align-self: flex-start;
+  img {
+    max-height: 80px;
+  }  
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1024px;
+  width: 100%;
+}
+
+.styled-input {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  color: #4265af;
+
+  input[type="radio"],
+  input[type="checkbox"] {
+    display: none;
+  }
+  .styled-checkbox {
+    min-height: 20px;
+    min-width: 20px;
+    background-color: #2662f0;
+    margin-right: 10px;
+    position: relative;
+
+    &::after {
+      content: '';
+      display: block;
+      height: 10px;
+      width: 4px;
+      border: 2px solid #fff;
+      border-left: 0;
+      border-top: 0;
+      transform: rotate(45deg);
+      position: absolute;
+      left: 7px;
+      bottom: 5px;      
+      opacity: 0;
+      visibility: hidden;
+      z-index: 1;
+      transition: all 0.4s;
+    }
+  }
+  input[type="radio"] + .styled-checkbox {
+    border-radius: 50%;
+    &::after {
+      border-radius: 50%;
+      background-color: #fff;
+      left: 1px;
+      top: 1px;
+      width: 14px;
+      height: 14px;
+    }    
+  }
+  input[type="radio"]:checked + .styled-checkbox:after,
+  input[type="checkbox"]:checked + .styled-checkbox:after {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+.input-box {
+  margin-bottom: 40px;
+}
+.izzy-input {
+  display: block;
+  width: 100%;
+  height: auto;
+  padding: 12px 15px;
+  border: 1px solid #676767;
+  border-radius: 4px;
+  font-size: 16px;
+  outline: 0;
+
+  &-required {
+    display: block !important;
+    width: 100% !important;
+    height: auto !important;
+    padding: 12px 15px !important;
+    border-radius: 4px !important;
+    font-size: 16px !important;
+    outline: 0 !important;
+    border: 1px solid #ec0a0a !important;
+  }
+}
+.izzy-label {
+  color: #676767;
+  display: block;
+  margin-bottom: 10px;
+
+  &-required {
+    display: block !important;
+    margin-bottom: 10px !important;
+    color: #ec0a0a !important;
+  }
+}
+
+.izzy-btn {
+  display: inline-block;
+  padding: 10px;
+  border-radius: 6px;
+  border: 0;
+  outline: 0;
+  min-width: 150px;
+  text-align: center;
+  background-color: #2662f0;
+  color: #fff;
+  cursor: pointer;
+
+  &.outline {
+    border: 2px solid #2662f0;
+    color: #2662f0;
+    background-color: transparent;
+  }
+}
+
+.nav-icon {
+  display: inline-block;
+  height: 30px;
+  width: 30px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  margin: 0 auto;
+}
+.home-icon {
+  background-image: url("./images/icons/home.png");
+}
+.user-icon {
+  background-image: url("./images/icons/user.png");
+}
+.chat-icon {
+  background-image: url("./images/icons/chat.png");
+}
+.cog-icon {
+  background-image: url("./images/icons/cog.png");
+}
+.power-icon {
+  background-image: url("./images/icons/power.png");
+}
+.folder-icon {
+  background-image: url("./images/icons/folder.png");
+}
+.date-icon {
+  background-image: url("./images/icons/date.png");
+}
+.file-icon {
+  background-image: url("./images/icons/file.png");
+}
+.send-icon {
+  background-image: url("./images/icons/send.png");
+}
+.mic-icon {
+  background-image: url("./images/icons/mic.png");
+}
+.play-icon {
+  background-image: url("./images/icons/play.png");
+}
+.health-icon {
+  background-image: url("./images/icons/health.png");
+}
+.menu-icon {
+  background-image: url("./images/icons/menu.png");
+}
+.burger-icon {
+  background-image: url("./images/icons/burger.png");
+}

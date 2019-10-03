@@ -1,0 +1,29 @@
+.izzy-dropdown {
+  position: relative;
+  &.open {
+    .izzy-dropdown-list {
+      transform: scale(1);
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
+  &-list {
+    background-color: #fff;
+    box-shadow: 0 0 3px 0 #ddd;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    transform: scale(0.9);
+    transition: all 0.4s;
+    width: 100%;
+    opacity: 0;
+    visibility: hidden;
+    li {
+      padding: 10px 15px;
+      &:hover {
+        background-color: #eee;
+      }
+    }
+  }
+}

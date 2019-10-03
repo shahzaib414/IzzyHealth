@@ -1,0 +1,244 @@
+.chat-list {
+  &-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    h3 {
+      color: #24215b;
+      font-size: 3rem;
+      display: flex;
+      align-items: center;
+      margin-bottom: 0;
+      padding-right: 15px;
+    }
+    &-right {
+      display: flex;
+      align-items: center;
+    }
+    .user-list {
+      display: flex;
+      align-items: center;
+    }
+    .avatar {
+      margin-right: 10px;
+      img {
+        border: 5px solid transparent;
+        height: 60px;
+        width: 60px;
+      }
+      &:hover img {
+        border: 5px solid #2662f0;
+      }
+    }
+    .no-cases {
+      color: #4265af;
+      font-size: 1.75rem;
+      font-weight: 600;
+      margin-right: 20px;
+      letter-spacing: 0.05em;
+    }
+  }
+  .case-heading {
+    background-color: #fff;
+    padding: 20px 40px;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+  }
+  .status-dropdown {
+    max-width: 300px;
+    width: 100%;
+  }
+  .status-filter {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    &-header {
+      padding: 10px 15px;
+      display: flex;
+      align-items: center;
+      background: #ededed url("../../../images/icons/dropdown.png") right 10px center no-repeat;
+      background-size: 10px;
+      cursor: pointer;
+      span {
+        display: block;
+        margin-right: 20px;
+      }
+      .status-dot {
+        height: 15px;
+        width: 15px;
+        border-radius: 50%;
+        background-color: #292929;
+      }
+    }
+  }
+  .filter-search {
+    flex: 1;
+    padding-left: 20px;
+  }
+  .searchbar {
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: 0;
+    input[type="search"] {
+      padding-left: 20px;
+      background: #ededed url("../../../images/icons/search.png")  right 15px center no-repeat;
+      background-size: 15px;
+    }
+  }
+  &-body {
+    .list-item {
+      padding: 20px;
+      background: #fff url("../../../images/icons/play.png") right 30px center no-repeat;
+      background-size: 15px;
+      margin-bottom: 5px;
+      cursor: pointer;
+      padding-right: 70px;
+      display: block;
+      &:hover {
+        background-color: #f9f9f9;
+      }
+      &-content {
+        display: flex;
+        align-items: center;
+        .avatar img {
+          height: 80px;
+          width: 80px;
+        }        
+      }
+      &-title {
+        padding-left: 30px;
+        h4 {
+          color: #151516;
+          font-size: 22px;
+        }
+        p {
+          color: #748aa1;
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 1200px) {
+    &-header {
+      h3 {
+        font-size: 2.5rem;
+      }
+    }    
+  }
+  @media screen and (max-width: 1024px) {
+    &-header {
+      h3 {
+        font-size: 2rem;
+      }
+      .no-cases {
+        font-size: 1.3rem;
+      }
+      .avatar {
+        img {
+          height: 50px;
+          width: 50px;
+        }
+      }
+    }
+
+  }
+  @media screen and (max-width: 767px) {
+    &-header {
+      h3 {
+        font-size: 1.75rem;
+      }
+      .no-cases {
+        font-size: 1.3rem;
+      }
+      .avatar {
+        img {
+          height: 50px;
+          width: 50px;
+        }
+      }
+    }
+    .case-heading {
+      padding: 20px 40px;
+      font-size: 1.25rem;
+    }
+  }
+  &-body {
+    .list-item {
+      &-content {
+        .avatar img {
+          height: 60px;
+          width: 60px;
+        }        
+      }
+      &-title {
+        padding-left: 20px;
+        h4 {
+          font-size: 18px;
+        }
+        p {
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 575px) {
+    &-header {
+      flex-direction: column;
+      &-right {
+        flex-direction: column;
+      }
+      .no-cases {
+        font-size: 18px;
+        margin-bottom: 10px;
+      }
+      .avatar {
+        margin-right: 5px;
+      }
+    }
+    .case-heading {
+      padding: 20px;
+      font-size: 1.25rem;
+    }
+    .status-dropdown {
+      max-width: 100%;
+    }
+    .status-filter {
+      flex-direction: column;
+      .status-filter-header {
+        max-width: 100%;
+        margin-bottom: 15px;
+      }
+      .filter-search {
+        width: 100%;
+        padding-left: 0;
+      }
+    }
+    .searchbar {
+      margin-left: 0;
+      max-width: 100%;
+    }
+    &-body {
+      .list-item {
+        background-position: right 20px center;
+        padding-right: 50px;
+        &-content {
+          .avatar img {
+            height: 50px;
+            width: 50px;
+            min-height: 50px;
+            min-width: 50px;
+          }        
+        }
+        &-title {
+          padding-left: 15px;
+          h4 {
+            font-size: 16px;
+          }
+          p {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+}

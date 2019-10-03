@@ -1,0 +1,38 @@
+{
+  "name": "izzyhealthapp.client",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "antd": "^3.9.4",
+    "axios": "^0.19.0",
+    "file-loader": "^4.2.0",
+    "formik": "^1.5.8",
+    "node-sass": "^4.12.0",
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0",
+    "react-moment": "^0.9.2",
+    "react-redux": "^7.1.1",
+    "react-router-dom": "^5.0.1",
+    "react-scripts": "2.1.1",
+    "react-slick": "^0.25.2",
+    "redux": "^4.0.4",
+    "redux-form": "^8.2.6",
+    "slick-carousel": "^1.8.1",
+    "style-loader": "^1.0.0",
+    "webfontloader": "^1.6.28",
+    "yup": "^0.27.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
+}

@@ -1,0 +1,17 @@
+.searchbar {
+  flex: 1;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: 15px;
+  input[type="search"] {
+    border: 0;
+    font-size: 14px;
+    padding-left: 40px;
+    background: #fff url("../../../src/images/icons/search.png") 15px center no-repeat;
+    background-size: 15px;
+
+    &::placeholder {
+      color: #9da8ad;
+    }
+  }
+}

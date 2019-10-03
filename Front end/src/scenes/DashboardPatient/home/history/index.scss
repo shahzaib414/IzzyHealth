@@ -1,0 +1,585 @@
+.history {
+  &-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 40px;
+    h3 {
+      color: #24215b;
+      font-size: 2.5rem;
+      display: flex;
+      align-items: center;
+      margin-bottom: 0;
+      padding-right: 15px;
+    }
+    &-right {
+      display: flex;
+      align-items: center;
+    }
+    .user-list {
+      display: flex;
+      align-items: center;
+    }
+    .avatar {
+      margin-right: 10px;
+      img {
+        border: 5px solid transparent;
+        height: 60px;
+        width: 60px;
+      }
+    }
+      .doctor-avatar.active img {
+        border: 5px solid #2662f0;
+      }
+    .izzy-btn {
+      padding: 15px;
+      width: 200px;
+      border-radius: 0;
+    }
+  }
+  &-body {
+    display: flex;
+    flex-direction: row-reverse;
+    margin: 0 -15px;
+  }
+  &-cards {
+    flex: 0 0 30%;
+    max-width: 30%;
+    padding: 0 15px;
+  }
+  &-table {
+    flex: 0 0 70%;
+    max-width: 70%;
+    padding: 0 15px;
+    margin-bottom: 30px;
+  }
+  .notification-card {
+    padding: 30px 20px;
+    background: linear-gradient(#6a3ecf, #258feb);
+    min-height: 220px;
+    margin-bottom: 20px;
+    position: relative;
+    border-radius: 6px;
+    &-head {
+      margin-bottom: 25px;
+    }
+    .card-menu-icon {
+      position: absolute;
+      right: 20px;
+      top: 20px;
+    }
+    h4 {
+      color: #fff;
+      font-size: 1.2rem;
+      margin-bottom: 10px;
+    }
+    p{
+      color: #b5b0ec;
+    }
+    ul {
+      li {
+        color: #fff;
+        position: relative;
+        padding-left: 20px;
+        font-size: 16px;
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+        &:before {
+          content: '';
+          display: block;
+          height: 10px;
+          width: 10px;
+          border-radius: 50%;
+          background-color: #ffc71d;
+          position: absolute;
+          left: 0;
+          top: 50%;
+          transform: translateY(-50%);
+        }
+        span {
+          margin-left: 20px;
+          padding-left: 20px;
+          border-left: 1px solid #568de7;
+          color: #adb9ef;
+          font-size: 14px;
+          display: block;
+        }
+      }
+    }
+  }
+  .prescription-card {
+    padding: 30px 20px;
+    background: linear-gradient(#f2845c, #de4b42);
+    min-height: 220px;
+    margin-bottom: 20px;
+    position: relative;
+    border-radius: 6px;
+    &:after {
+      content: '';
+      display: block;
+      height: 120px;
+      width: 120px;
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      background-repeat: no-repeat;
+      background-image: url("../../../../images/pers.png");
+      background-size: cover;      
+    }
+    &-head {
+      margin-bottom: 25px;
+    }
+    .card-menu-icon {
+      position: absolute;
+      right: 20px;
+      top: 20px;
+    }
+    h4 {
+      color: #fff;
+      font-size: 1.25rem;
+      margin-bottom: 10px;
+    }
+    p{
+      color: #b5b0ec;
+    }
+    .medication {
+      position: relative;
+      margin-bottom: 20px;
+      cursor: pointer;
+      h5 {
+        color: #2d2b5e;
+        font-size: 18px;
+        font-weight: 500;
+        margin-bottom: 10px;
+      }
+      .arrow-icon {
+        position: absolute;
+        right: 0px;
+        top: 10px;
+      }
+      &-date {
+        color: #fff;
+        display: flex;
+        align-items: center;
+        font-size: 14px;
+        margin-bottom: 10px;
+        .med-date-icon {
+          margin-left: 0;
+          margin-right: 10px;
+          height: 25px;
+        }
+        .medication-days {
+          margin-left: 30px;          
+        }
+      }
+      &-days {
+        text-decoration: underline;
+        color: #fff;
+        font-size: 14px;
+      }
+    }
+  }
+
+  &-table {
+    display: flex;
+    flex-direction: column;
+    .status-dropdown {
+      flex: 1;
+      padding: 0 10px;
+    }
+    .date-filter-box {
+      flex: 1;
+      padding: 0 10px;
+      margin-top: -12px;
+      margin-bottom: 12px;
+    }
+    .date-filter {
+      position: relative;
+      input[type="date"]{
+        border: 0;
+        padding: 10px 15px;
+        border-radius: 6px;
+        color: #50526a;
+        background-color: #a5a5a5;
+        font-size: 16px;
+        width: 100%;
+        cursor: pointer;
+        outline: 0;
+      }
+      &:after {
+        content: '';
+        display: block;
+        position: absolute;
+        right: 30px;
+        top: 0;
+        height: 25px;
+        width: 25px;
+        background: #a5a5a5 url("../../../../images/icons/date.png") no-repeat;
+        background-size: contain;
+        opacity: 1;
+        transition: all 0.4s;
+        z-index: 1;
+      }
+      &:hover:after {
+        opacity: 0;
+        z-index: -1;
+      }
+    }    
+    .status-filter {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      margin: 0 -10px 30px;
+      &-header {
+        padding: 10px 15px;
+        display: flex;
+        align-items: center;
+        background: #a5a5a5 url("../../../../images/icons/dropdown.png") right 10px center no-repeat;
+        background-size: 10px;
+        color: #50526a;
+        cursor: pointer;
+        border-radius: 6px;
+        span {
+          display: block;
+          margin-right: 20px;
+        }
+        .status-dot {
+          height: 15px;
+          width: 15px;
+          border-radius: 50%;
+          background-color: #292929;
+        }
+      }
+    }
+    .filter-search {
+      flex: 1;
+      padding: 0 10px;
+    }
+    .searchbar {
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: 0;
+      input[type="search"] {
+        padding-left: 20px;
+        background: #fff url("../../../../images/icons/blue-search.png")  right 15px center no-repeat;
+        background-size: 15px;
+        color: #50526a;
+        &::placeholder {
+          color: #50526a;
+        }
+      }
+    }    
+    &-head {
+      display: flex;
+      text-align: center;
+      padding: 5px 0;
+      div {
+        flex: 1;
+        font-size: 14px;
+        color: #4265af;
+        padding: 5px 0;
+        font-weight: 600;
+        &:first-child {
+          flex: 0 0 20%;
+          max-width: 20%;
+        }
+        &:nth-child(2) {
+          flex: 0 0 45%;
+          max-width: 45%;
+        }
+        &:nth-child(3) {
+          flex: 0 0 15%;
+          max-width: 15%;
+        }
+      }
+    }
+    .history-item {
+      background-color: #fff;
+      margin-bottom: 5px;
+      border-radius: 4px;
+      display: flex;
+      text-align: center;
+      &.active {
+        border-left: 4px solid #4b5ff7;
+        border-radius: 6px; 
+      }
+      .case-number {
+        flex: 0 0 20%;
+        max-width: 20%;
+        display: flex;
+        border-right: 1px solid #e7e7e7;
+        a {
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          flex: 1;
+          padding: 20px 10px;
+          text-decoration: underline;
+          color: #8096c8;
+          font-size: 14px;
+          .date-icon {
+            height: 25px;
+            margin: 0 15px 0 0;
+          }
+        }
+      }
+      .case-subject {
+        padding: 20px 10px;
+        flex: 0 0 45%;
+        max-width: 45%;
+        color: #7b7c7a;
+        font-size: 18px;
+      }
+      .case-level {
+        flex: 0 0 15%;
+        max-width: 15%;
+        padding: 20px 5px;
+        text-align: center;
+        color: #333;
+        text-decoration: underline;
+        border-right: 1px solid #e7e7e7;
+        border-left: 1px solid #e7e7e7;        
+        &.red {
+          color: #ff2e2e;
+        }
+        &.green {
+          color: #30e6ac;
+        }
+        &.yellow {
+          color: #caf43b;
+        }
+      }
+      .case-status {
+        flex: 0 0 20%;
+        max-width: 20%;
+        font-size: 20px;
+        padding: 20px 15px 20px 30px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        .status-dot {
+          height: 25px;
+          width: 25px;
+          min-height: 25px;
+          min-width: 25px;
+          background-color: #55e9ba;
+          border-radius: 50%;
+          margin-left: 20px;
+          &.open {
+            background-color: #2662f0;
+          }
+        }
+      }
+    }
+    &-tabs {
+      background-color: #fff;
+      margin-bottom: 40px;
+      ul {
+        display: flex;
+        justify-content: space-between;
+        li {
+          flex: 1;
+          text-align: center;
+          font-size: 1.25rem;
+          position: relative;
+          cursor: pointer;
+          padding: 30px 20px;
+          border-bottom: 5px solid transparent;
+        }
+        li.active {
+          border-bottom-color: #2662f0;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 1400px) {
+    &-cards {
+      flex: 0 0 35%;
+      max-width: 35%;
+    }
+    &-table {
+      flex: 0 0 65%;
+      max-width: 65%;
+    }    
+    .status-dropdown,		
+    .date-filter-box,		
+    .filter-search {		
+      max-width: 50%;		
+      flex: 0 0 50%;		
+    }
+  }
+  @media screen and (max-width: 1200px) {
+    &-header {
+      h3 {
+        font-size: 2.2rem;
+      }
+    }
+    &-body {
+      flex-direction: column;
+    }
+    &-cards {
+      display: flex;
+      justify-content: space-between;
+    }
+    .prescription-card,
+    .notification-card {
+      flex: 0 0 49%;
+      max-width: 49%;
+    }
+    &-cards {
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
+    &-table {
+      flex: 0 0 100%;
+      max-width: 100%;
+    }    
+    .status-dropdown,		
+    .date-filter-box,		
+    .filter-search {		
+      flex: 1;		
+      max-width: none;		
+    }
+  }
+  @media screen and (max-width: 1024px) {
+    &-header {
+      h3 {
+        font-size: 1.75rem;
+      }
+      .no-cases {
+        font-size: 1.3rem;
+      }
+      .avatar {
+        img {
+          height: 50px;
+          width: 50px;
+        }
+      }
+      .izzy-btn {
+        padding: 10px;
+        font-size: 14px;
+        width: 160px;
+      }
+    }
+    &-body {
+      flex-direction: column;
+    }
+    &-cards {
+      display: flex;
+      flex-direction: column;
+    }
+    .status-dropdown,		
+    .date-filter-box,		
+    .filter-search {		
+      max-width: 50%;		
+      flex: 0 0 50%;		
+    }
+    .prescription-card,
+    .notification-card {
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
+    .history-table {
+      &-tabs {
+        li {
+          font-size: 16px;
+          span {
+            padding: 20px 5px;
+          }
+        }
+      }
+      &-section {
+        overflow-x: scroll;
+        .history-table-head,
+        .history-item {
+          width: 900px;
+          .case-number a,
+          .case-status,
+          .case-level,
+          .case-subject {
+            font-size: 14px;
+            padding: 20px;
+          }
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 767px) {
+    &-header {
+      &-right {
+        flex-direction: column-reverse;
+        .izzy-btn {		
+          margin-bottom: 20px;		
+        }
+      }
+      h3 {
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+      }
+      .avatar {
+        img {
+          height: 50px;
+          width: 50px;
+        }
+      }
+    }
+
+  }
+  @media screen and (max-width: 575px) {
+    &-header {
+      flex-direction: column;
+      text-align: center;
+      .avatar {
+        margin-right: 5px;
+      }
+    }
+    .history-table {
+      &-tabs {
+        li {
+          font-size: 14px;
+        }
+      }
+      &-section {
+        overflow-x: scroll;
+        .history-table-head,
+        .history-item {
+          width: 900px;
+          .case-number a,
+          .case-status,
+          .case-level,
+          .case-subject {
+            font-size: 14px;
+            padding: 20px;
+          }
+        }
+      }
+    }
+    .status-dropdown {
+      max-width: 100%;
+    }
+    .date-filter {		
+      margin-bottom: 10px;		
+    }
+    .case-heading {
+      padding: 20px;
+      font-size: 1.25rem;
+    }
+    .status-filter {
+      align-items: normal;
+      flex-direction: column;
+      .status-filter-header {
+        max-width: 100%;
+        margin-bottom: 10px;
+      }
+      .status-dropdown,		
+      .date-filter-box,
+      .filter-search {
+        max-width: 100%;
+        flex: 0 0 100%;
+      }
+    }
+  }
+}

@@ -1,0 +1,1 @@
+export const CREATE_CASE = 'CREATE_CASE';
